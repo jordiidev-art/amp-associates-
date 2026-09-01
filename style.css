@@ -4207,3 +4207,175 @@ body:not(.loading) .header {
     max-height: 54px !important;
   }
 }
+/* =========================================================
+   GMP HEADER — FINAL LOGO SIZE OVERRIDE
+   ========================================================= */
+
+/* Desktop header */
+.header {
+  height: 110px !important;
+  min-height: 110px !important;
+}
+
+.header-inner {
+  height: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+
+/* Logo group */
+.header-brand {
+  display: flex !important;
+  align-items: center !important;
+  gap: 20px !important;
+  flex-shrink: 0 !important;
+}
+
+
+/* CA / INDIA LOGO */
+.header-ca-logo {
+  width: 100px !important;
+  height: 82px !important;
+
+  max-width: 100px !important;
+  max-height: 82px !important;
+
+  object-fit: contain !important;
+  object-position: center !important;
+
+  flex-shrink: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+
+/* GMP & ASSOCIATES LOGO */
+.header-gmp-logo {
+  width: 190px !important;
+  height: 82px !important;
+
+  max-width: 190px !important;
+  max-height: 82px !important;
+
+  object-fit: contain !important;
+  object-position: left center !important;
+
+  flex-shrink: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+
+/* Make sure no old blending/transform rules interfere */
+.header-ca-logo,
+.header-gmp-logo {
+  transform: none !important;
+  mix-blend-mode: normal !important;
+  background: transparent !important;
+}
+
+
+/* Navigation remains on the right */
+.desktop-nav {
+  margin-left: auto !important;
+}
+
+
+/* =========================================================
+   LARGE DESKTOP
+   ========================================================= */
+
+@media (min-width: 1400px) {
+
+  .header {
+    height: 120px !important;
+    min-height: 120px !important;
+  }
+
+  .header-brand {
+    gap: 24px !important;
+  }
+
+  .header-ca-logo {
+    width: 115px !important;
+    height: 92px !important;
+
+    max-width: 115px !important;
+    max-height: 92px !important;
+  }
+
+  .header-gmp-logo {
+    width: 215px !important;
+    height: 92px !important;
+
+    max-width: 215px !important;
+    max-height: 92px !important;
+  }
+}
+
+
+/* =========================================================
+   IPAD / TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .header {
+    height: 88px !important;
+    min-height: 88px !important;
+  }
+
+  .header-brand {
+    gap: 12px !important;
+  }
+
+  .header-ca-logo {
+    width: 75px !important;
+    height: 64px !important;
+
+    max-width: 75px !important;
+    max-height: 64px !important;
+  }
+
+  .header-gmp-logo {
+    width: 145px !important;
+    height: 64px !important;
+
+    max-width: 145px !important;
+    max-height: 64px !important;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .header {
+    height: 78px !important;
+    min-height: 78px !important;
+  }
+
+  .header-brand {
+    gap: 8px !important;
+  }
+
+  .header-ca-logo {
+    width: 62px !important;
+    height: 54px !important;
+
+    max-width: 62px !important;
+    max-height: 54px !important;
+  }
+
+  .header-gmp-logo {
+    width: 115px !important;
+    height: 54px !important;
+
+    max-width: 115px !important;
+    max-height: 54px !important;
+  }
+}
