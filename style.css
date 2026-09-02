@@ -4464,3 +4464,2178 @@ body:not(.loading) .header {
 /* =========================================================
    END
    ========================================================= */
+
+   /* ================================================================
+   GMP & ASSOCIATES — FINAL HERO OVERRIDE
+   ---------------------------------------------------------------
+   FINAL STRUCTURE:
+
+   HEADER
+        ↓
+   GMP BRAND / LOGO
+        ↓
+   EYEBROW
+        ↓
+   ┌───────────────────────────────┬───────────────────────────┐
+   │                               │                           │
+   │  PRECISION                    │  01                       │
+   │  BEYOND                       │  Audit &                   │
+   │  NUMBERS.                     │  Assurance                 │
+   │                               │                           │
+   │                               │  02                       │
+   │                               │  Tax &                     │
+   │                               │  Advisory                  │
+   │                               │                           │
+   │                               │  03                       │
+   │                               │  Finance &                 │
+   │                               │  Accounting                 │
+   │                               │                           │
+   └───────────────────────────────┴───────────────────────────┘
+
+   DESCRIPTION + CTA remain below headline.
+   Fine white/blue grid + soft blue atmospheric blur restored.
+   ================================================================ */
+
+
+/* ================================================================
+   01 — VARIABLES
+   ================================================================ */
+
+:root {
+    --gmp-header-height: 120px;
+
+    --hero-left: clamp(28px, 3vw, 58px);
+    --hero-right: clamp(28px, 3vw, 58px);
+
+    --gmp-blue: #2864e8;
+    --gmp-ink: #0d1427;
+
+    --gmp-grid: 74px;
+
+    --services-width: clamp(320px, 28vw, 470px);
+    --hero-gap: clamp(50px, 7vw, 130px);
+}
+
+
+/* ================================================================
+   02 — HEADER
+   ================================================================ */
+
+.header {
+    position: relative !important;
+    z-index: 99999 !important;
+
+    overflow: visible !important;
+}
+
+
+/* ================================================================
+   03 — HERO
+   ================================================================ */
+
+.hero {
+    position: relative !important;
+
+    isolation: isolate !important;
+
+    width: 100% !important;
+
+    min-height: calc(100vh - var(--gmp-header-height)) !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    overflow: hidden !important;
+
+    box-sizing: border-box !important;
+
+    background-color: #ffffff !important;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,0.74),
+            rgba(255,255,255,0.74)
+        ),
+        linear-gradient(
+            to right,
+            rgba(39, 92, 180, 0.075) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            to bottom,
+            rgba(39, 92, 180, 0.075) 1px,
+            transparent 1px
+        ) !important;
+
+    background-size:
+        auto,
+        var(--gmp-grid) var(--gmp-grid),
+        var(--gmp-grid) var(--gmp-grid) !important;
+
+    background-position:
+        center,
+        center,
+        center !important;
+}
+
+
+/* ================================================================
+   04 — SOFT BLUE ATMOSPHERIC BLUR
+   ================================================================ */
+
+.hero::before {
+    content: "" !important;
+
+    position: absolute !important;
+
+    width: min(75vw, 1100px) !important;
+    height: min(75vw, 1100px) !important;
+
+    right: -23vw !important;
+    top: 8% !important;
+
+    border-radius: 50% !important;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(77, 166, 255, 0.22) 0%,
+            rgba(77, 166, 255, 0.12) 27%,
+            rgba(77, 166, 255, 0.055) 48%,
+            transparent 72%
+        ) !important;
+
+    filter: blur(60px) !important;
+
+    pointer-events: none !important;
+
+    z-index: -2 !important;
+}
+
+
+/* Bottom-left atmospheric glow */
+
+.hero::after {
+    content: "" !important;
+
+    position: absolute !important;
+
+    width: min(65vw, 900px) !important;
+    height: min(65vw, 900px) !important;
+
+    left: -28vw !important;
+    bottom: -35vw !important;
+
+    border-radius: 50% !important;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(70, 126, 245, 0.14) 0%,
+            rgba(70, 126, 245, 0.055) 42%,
+            transparent 72%
+        ) !important;
+
+    filter: blur(65px) !important;
+
+    pointer-events: none !important;
+
+    z-index: -2 !important;
+}
+
+
+/* ================================================================
+   05 — HERO CONTAINER
+   ================================================================ */
+
+.hero-container {
+    position: relative !important;
+
+    width: 100% !important;
+
+    min-height: calc(100vh - var(--gmp-header-height)) !important;
+
+    margin: 0 !important;
+
+    padding:
+        42px
+        var(--hero-right)
+        70px
+        var(--hero-left) !important;
+
+    box-sizing: border-box !important;
+
+    overflow: visible !important;
+
+    z-index: 2 !important;
+}
+
+
+/* ================================================================
+   06 — GMP BRAND
+   ---------------------------------------------------------------
+   CRITICAL:
+   Keep it in normal document flow.
+   Never absolute-position it above the hero.
+   ================================================================ */
+
+.hero-brand,
+.hero-gmp-brand {
+    position: relative !important;
+
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+
+    display: block !important;
+
+    width: fit-content !important;
+    max-width: 100% !important;
+
+    height: auto !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    transform: none !important;
+
+    visibility: visible !important;
+    opacity: 1 !important;
+
+    overflow: visible !important;
+
+    z-index: 20 !important;
+}
+
+
+/* Actual GMP image */
+
+.hero-brand-logo,
+.hero-gmp-logo {
+    position: relative !important;
+
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+
+    display: block !important;
+
+    width: clamp(430px, 38vw, 650px) !important;
+
+    max-width: 65vw !important;
+
+    height: auto !important;
+
+    max-height: 190px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    object-fit: contain !important;
+    object-position: left center !important;
+
+    transform: none !important;
+
+    visibility: visible !important;
+    opacity: 1 !important;
+
+    clip-path: none !important;
+    -webkit-clip-path: none !important;
+
+    filter: none !important;
+
+    mix-blend-mode: normal !important;
+
+    background: transparent !important;
+
+    z-index: 21 !important;
+}
+
+
+/* ================================================================
+   07 — EYEBROW
+   ================================================================ */
+
+.hero-eyebrow {
+    position: relative !important;
+
+    display: block !important;
+
+    margin-top: clamp(42px, 5vh, 70px) !important;
+
+    margin-bottom: clamp(22px, 3vh, 38px) !important;
+
+    max-width: 650px !important;
+
+    z-index: 15 !important;
+}
+
+
+/* ================================================================
+   08 — MAIN HERO CONTENT
+   ---------------------------------------------------------------
+   THIS IS THE IMPORTANT PART.
+
+   LEFT  = headline
+   RIGHT = services
+
+   Both occupy the SAME vertical coordinate system.
+   ================================================================ */
+
+.hero-content {
+    position: relative !important;
+
+    display: grid !important;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        var(--services-width) !important;
+
+    column-gap: var(--hero-gap) !important;
+
+    align-items: stretch !important;
+
+    width: 100% !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    box-sizing: border-box !important;
+
+    z-index: 10 !important;
+}
+
+
+/* ================================================================
+   09 — LEFT SIDE
+   ================================================================ */
+
+.hero-content > :first-child {
+    min-width: 0 !important;
+}
+
+
+/* ================================================================
+   10 — HEADLINE
+   ================================================================ */
+
+.hero-title {
+    position: relative !important;
+
+    width: 100% !important;
+
+    max-width: 760px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    transform: none !important;
+
+    overflow: visible !important;
+
+    color: var(--gmp-ink) !important;
+
+    line-height: 0.86 !important;
+
+    letter-spacing: -0.055em !important;
+
+    z-index: 15 !important;
+}
+
+
+/* Keep every word on its own line */
+
+.hero-title span,
+.hero-title .line {
+    display: block !important;
+
+    width: max-content !important;
+    max-width: 100% !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    transform: none !important;
+}
+
+
+/* ================================================================
+   11 — SERVICES PANEL
+   ---------------------------------------------------------------
+   RIGHT EXTREME SIDE.
+
+   It stretches to EXACTLY the height of the headline.
+   ================================================================ */
+
+.hero-services,
+.hero-service-list,
+.services-panel {
+    position: relative !important;
+
+    grid-column: 2 !important;
+
+    grid-row: 1 !important;
+
+    align-self: stretch !important;
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    width: 100% !important;
+
+    height: auto !important;
+
+    min-height: 0 !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    box-sizing: border-box !important;
+
+    border-left: 1px solid rgba(35, 91, 175, 0.12) !important;
+
+    z-index: 20 !important;
+
+    overflow: visible !important;
+}
+
+
+/* ================================================================
+   12 — SERVICE ROWS
+   ---------------------------------------------------------------
+   Three equal sections.
+
+   Top line = top of Precision
+   Bottom line = bottom of Numbers.
+   ================================================================ */
+
+.hero-services > *,
+.hero-service-list > *,
+.services-panel > * {
+    position: relative !important;
+
+    flex: 1 1 0 !important;
+
+    min-height: 0 !important;
+
+    width: 100% !important;
+
+    margin: 0 !important;
+
+    padding:
+        28px
+        clamp(22px, 2.2vw, 38px) !important;
+
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    justify-content: center !important;
+
+    align-items: flex-start !important;
+
+    box-sizing: border-box !important;
+
+    border-top: 1px solid rgba(35, 91, 175, 0.13) !important;
+
+    transform: none !important;
+}
+
+
+/* Bottom line */
+
+.hero-services > *:last-child,
+.hero-service-list > *:last-child,
+.services-panel > *:last-child {
+    border-bottom: 1px solid rgba(35, 91, 175, 0.13) !important;
+}
+
+
+/* ================================================================
+   13 — SERVICE NUMBERS
+   ================================================================ */
+
+.hero-services .number,
+.hero-services .service-number,
+.hero-service-list .number,
+.hero-service-list .service-number,
+.services-panel .number,
+.services-panel .service-number {
+    display: block !important;
+
+    margin: 0 0 13px 0 !important;
+
+    padding: 0 !important;
+
+    color: var(--gmp-blue) !important;
+
+    font-size: 11px !important;
+
+    font-weight: 700 !important;
+
+    line-height: 1 !important;
+
+    letter-spacing: 0.05em !important;
+}
+
+
+/* ================================================================
+   14 — SERVICE TITLES
+   ================================================================ */
+
+.hero-services h3,
+.hero-services h4,
+.hero-service-list h3,
+.hero-service-list h4,
+.services-panel h3,
+.services-panel h4 {
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    color: var(--gmp-ink) !important;
+
+    font-size: clamp(16px, 1.25vw, 21px) !important;
+
+    font-weight: 600 !important;
+
+    line-height: 1.05 !important;
+
+    letter-spacing: -0.025em !important;
+}
+
+
+/* ================================================================
+   15 — DESCRIPTION
+   ---------------------------------------------------------------
+   Description stays under the headline,
+   NOT underneath the service panel.
+   ================================================================ */
+
+.hero-description {
+    position: relative !important;
+
+    width: min(680px, 100%) !important;
+
+    max-width: 680px !important;
+
+    margin-top: clamp(42px, 5vh, 68px) !important;
+
+    margin-bottom: 0 !important;
+
+    padding: 0 !important;
+
+    line-height: 1.55 !important;
+
+    z-index: 15 !important;
+}
+
+
+/* ================================================================
+   16 — CTA / ACTIONS
+   ================================================================ */
+
+.hero-actions {
+    position: relative !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    gap: 28px !important;
+
+    margin-top: clamp(32px, 4vh, 52px) !important;
+
+    padding: 0 !important;
+
+    transform: none !important;
+
+    z-index: 25 !important;
+}
+
+
+/* ================================================================
+   17 — REMOVE OLD POSITIONING DAMAGE
+   ================================================================ */
+
+.hero-container > *,
+.hero-content > *,
+.hero-title,
+.hero-brand,
+.hero-gmp-brand,
+.hero-brand-logo,
+.hero-gmp-logo,
+.hero-services,
+.hero-service-list,
+.services-panel,
+.hero-description,
+.hero-actions {
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+
+    transform: none !important;
+}
+
+
+/* ================================================================
+   18 — LARGE DESKTOP
+   ================================================================ */
+
+@media (min-width: 1400px) {
+
+    :root {
+        --gmp-grid: 78px;
+        --services-width: 440px;
+        --hero-gap: 110px;
+    }
+
+    .hero-container {
+        padding-top: 46px !important;
+    }
+
+    .hero-brand-logo,
+    .hero-gmp-logo {
+        width: 640px !important;
+        max-width: 52vw !important;
+        max-height: 195px !important;
+    }
+
+    .hero-eyebrow {
+        margin-top: 48px !important;
+        margin-bottom: 34px !important;
+    }
+
+    .hero-title {
+        max-width: 800px !important;
+    }
+
+    .hero-services > *,
+    .hero-service-list > *,
+    .services-panel > * {
+        padding-left: 34px !important;
+        padding-right: 34px !important;
+    }
+}
+
+
+/* ================================================================
+   19 — LAPTOP / TABLET
+   ================================================================ */
+
+@media (max-width: 1100px) and (min-width: 901px) {
+
+    :root {
+        --services-width: 300px;
+        --hero-gap: 45px;
+        --hero-left: 30px;
+        --hero-right: 30px;
+    }
+
+    .hero-brand-logo,
+    .hero-gmp-logo {
+        width: min(520px, 48vw) !important;
+        max-width: 60vw !important;
+    }
+
+    .hero-title {
+        max-width: 680px !important;
+    }
+
+    .hero-services > *,
+    .hero-service-list > *,
+    .services-panel > * {
+        padding-left: 22px !important;
+        padding-right: 22px !important;
+    }
+}
+
+
+/* ================================================================
+   20 — TABLET
+   ================================================================ */
+
+@media (max-width: 900px) {
+
+    :root {
+        --gmp-header-height: 88px;
+        --gmp-grid: 58px;
+    }
+
+    .hero {
+        min-height: auto !important;
+        overflow: hidden !important;
+    }
+
+    .hero-container {
+        min-height: auto !important;
+
+        padding:
+            30px
+            28px
+            70px
+            28px !important;
+    }
+
+    .hero-brand-logo,
+    .hero-gmp-logo {
+        width: min(500px, 78vw) !important;
+
+        max-width: 78vw !important;
+
+        max-height: 150px !important;
+    }
+
+    .hero-eyebrow {
+        margin-top: 34px !important;
+        margin-bottom: 26px !important;
+    }
+
+    .hero-content {
+        display: grid !important;
+
+        grid-template-columns: 1fr !important;
+
+        grid-template-rows: auto auto !important;
+
+        row-gap: 42px !important;
+    }
+
+    .hero-title {
+        grid-column: 1 !important;
+        grid-row: 1 !important;
+
+        width: 100% !important;
+
+        max-width: 90vw !important;
+    }
+
+    .hero-services,
+    .hero-service-list,
+    .services-panel {
+        grid-column: 1 !important;
+        grid-row: 2 !important;
+
+        width: 100% !important;
+
+        height: auto !important;
+
+        min-height: 0 !important;
+
+        border-left: 1px solid rgba(35, 91, 175, 0.12) !important;
+    }
+
+    .hero-services > *,
+    .hero-service-list > *,
+    .services-panel > * {
+        min-height: 115px !important;
+
+        flex: none !important;
+    }
+
+    .hero-description {
+        max-width: 700px !important;
+
+        margin-top: 34px !important;
+    }
+}
+
+
+/* ================================================================
+   21 — MOBILE
+   ================================================================ */
+
+@media (max-width: 600px) {
+
+    :root {
+        --gmp-header-height: 78px;
+        --gmp-grid: 42px;
+    }
+
+    .hero-container {
+        padding:
+            25px
+            20px
+            55px
+            20px !important;
+    }
+
+    .hero-brand,
+    .hero-gmp-brand {
+        width: 100% !important;
+    }
+
+    .hero-brand-logo,
+    .hero-gmp-logo {
+        width: min(360px, 90vw) !important;
+
+        max-width: 90vw !important;
+
+        max-height: 120px !important;
+    }
+
+    .hero-eyebrow {
+        margin-top: 28px !important;
+
+        margin-bottom: 22px !important;
+    }
+
+    .hero-title {
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        font-size: clamp(60px, 18vw, 108px) !important;
+
+        line-height: 0.87 !important;
+
+        letter-spacing: -0.055em !important;
+    }
+
+    .hero-title span,
+    .hero-title .line {
+        width: max-content !important;
+
+        max-width: 100% !important;
+    }
+
+    .hero-services,
+    .hero-service-list,
+    .services-panel {
+        width: 100% !important;
+
+        border-left: 1px solid rgba(35, 91, 175, 0.12) !important;
+    }
+
+    .hero-services > *,
+    .hero-service-list > *,
+    .services-panel > * {
+        min-height: 105px !important;
+
+        padding:
+            20px
+            18px !important;
+    }
+
+    .hero-description {
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        margin-top: 32px !important;
+    }
+
+    .hero-actions {
+        flex-wrap: wrap !important;
+
+        gap: 18px !important;
+    }
+}
+
+
+/* ================================================================
+   22 — FINAL VISIBILITY SAFETY
+   ================================================================ */
+
+.hero-brand,
+.hero-gmp-brand,
+.hero-brand-logo,
+.hero-gmp-logo {
+    visibility: visible !important;
+
+    opacity: 1 !important;
+
+    clip-path: none !important;
+
+    -webkit-clip-path: none !important;
+}
+
+
+/* ================================================================
+   END — DO NOT ADD ANOTHER HERO OVERRIDE AFTER THIS
+   ================================================================ */
+
+   /* =========================================================
+   GMP — FINAL LANDING PAGE OVERRIDE
+   DO NOT TOUCH THE GMP LOGO / LOCKUP
+   ========================================================= */
+
+/* ---------- GLOBAL ---------- */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HEADER
+   Leave the existing logo styling completely untouched.
+   ========================================================= */
+
+header {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+
+    height: 124px !important;
+
+    z-index: 1000 !important;
+
+    background: rgba(255, 255, 255, 0.96) !important;
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    border-bottom: 1px solid rgba(20, 45, 90, 0.08);
+}
+
+
+/* =========================================================
+   LANDING / HERO
+   ========================================================= */
+
+.hero,
+.hero-section,
+.landing,
+.landing-page,
+.home-hero {
+    position: relative !important;
+
+    margin: 0 !important;
+
+    padding-top: 124px !important;
+
+    min-height: 100vh !important;
+
+    overflow: hidden !important;
+
+    isolation: isolate !important;
+}
+
+
+/* =========================================================
+   GRID — thin background lines
+   ========================================================= */
+
+.hero::before,
+.hero-section::before,
+.landing::before,
+.landing-page::before,
+.home-hero::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -2;
+
+    pointer-events: none;
+
+    background-image:
+        linear-gradient(
+            rgba(41, 102, 220, 0.065) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(41, 102, 220, 0.065) 1px,
+            transparent 1px
+        );
+
+    background-size: 74px 74px;
+
+    background-position: center top;
+}
+
+
+/* =========================================================
+   SOFT BLUE BLUR / LIGHT
+   ========================================================= */
+
+.hero::after,
+.hero-section::after,
+.landing::after,
+.landing-page::after,
+.home-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 650px;
+    height: 650px;
+
+    right: -180px;
+    top: 180px;
+
+    z-index: -1;
+
+    pointer-events: none;
+
+    background: radial-gradient(
+        circle,
+        rgba(70, 155, 255, 0.18) 0%,
+        rgba(70, 155, 255, 0.09) 35%,
+        rgba(70, 155, 255, 0.025) 58%,
+        transparent 74%
+    );
+
+    filter: blur(50px);
+}
+
+
+/* =========================================================
+   HERO INNER FLOW
+   ========================================================= */
+
+.hero-content,
+.hero-inner,
+.hero-container,
+.hero-wrapper,
+.landing-content {
+    position: relative !important;
+
+    z-index: 2 !important;
+
+    padding-top: 55px !important;
+}
+
+
+/* =========================================================
+   IMPORTANT:
+   GMP & ASSOCIATES LOGO IS NOT TOUCHED.
+   
+   NO .gmp-logo
+   NO .hero-logo
+   NO .brand-lockup
+   NO image positioning
+   ========================================================= */
+
+
+/* =========================================================
+   HERO TITLE
+   ========================================================= */
+
+.hero h1,
+.hero-title,
+.hero-heading,
+.landing h1,
+.home-hero h1 {
+    position: relative !important;
+
+    z-index: 5 !important;
+
+    margin-top: 0 !important;
+
+    transform: none !important;
+
+    visibility: visible !important;
+
+    opacity: 1 !important;
+}
+
+
+/* =========================================================
+   HERO DESCRIPTION
+   ========================================================= */
+
+.hero-description,
+.hero-copy,
+.hero-text,
+.hero-subtitle {
+    position: relative !important;
+
+    z-index: 5 !important;
+
+    margin-top: 35px !important;
+
+    max-width: 650px !important;
+
+    visibility: visible !important;
+
+    opacity: 1 !important;
+}
+
+
+/* =========================================================
+   SERVICES
+   ========================================================= */
+
+.hero-services,
+.hero-service-list,
+.services-list,
+.hero-panel,
+.hero-services-panel {
+    position: relative !important;
+
+    z-index: 5 !important;
+
+    transform: none !important;
+
+    margin-top: 0 !important;
+
+    visibility: visible !important;
+
+    opacity: 1 !important;
+}
+
+
+/* =========================================================
+   SERVICE ROWS
+   ========================================================= */
+
+.hero-services > *,
+.hero-service-list > *,
+.services-list > *,
+.hero-panel > *,
+.hero-services-panel > * {
+    position: relative !important;
+
+    z-index: 6 !important;
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.hero-actions,
+.hero-cta,
+.hero-buttons,
+.cta-group {
+    position: relative !important;
+
+    z-index: 10 !important;
+
+    display: flex !important;
+
+    align-items: center !important;
+
+    gap: 28px !important;
+
+    margin-top: 38px !important;
+}
+
+
+/* =========================================================
+   SCROLL INDICATOR
+   ========================================================= */
+
+.scroll-indicator,
+.scroll-explore,
+.hero-scroll {
+    position: relative !important;
+
+    z-index: 10 !important;
+
+    visibility: visible !important;
+
+    opacity: 1 !important;
+}
+
+
+/* =========================================================
+   DESKTOP
+   ========================================================= */
+
+@media (min-width: 1100px) {
+
+    .hero,
+    .hero-section,
+    .landing,
+    .landing-page,
+    .home-hero {
+        padding-top: 124px !important;
+
+        min-height: 100vh !important;
+    }
+
+    .hero-content,
+    .hero-inner,
+    .hero-container,
+    .hero-wrapper,
+    .landing-content {
+        padding-left: 42px !important;
+        padding-right: 42px !important;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (min-width: 768px) and (max-width: 1099px) {
+
+    header {
+        height: 104px !important;
+    }
+
+    .hero,
+    .hero-section,
+    .landing,
+    .landing-page,
+    .home-hero {
+        padding-top: 104px !important;
+    }
+
+    .hero-content,
+    .hero-inner,
+    .hero-container,
+    .hero-wrapper,
+    .landing-content {
+        padding-top: 45px !important;
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 767px) {
+
+    header {
+        height: 82px !important;
+    }
+
+    .hero,
+    .hero-section,
+    .landing,
+    .landing-page,
+    .home-hero {
+        padding-top: 82px !important;
+
+        min-height: 100svh !important;
+    }
+
+    .hero-content,
+    .hero-inner,
+    .hero-container,
+    .hero-wrapper,
+    .landing-content {
+        padding: 38px 20px 70px !important;
+    }
+
+    .hero::before,
+    .hero-section::before,
+    .landing::before,
+    .landing-page::before,
+    .home-hero::before {
+        background-size: 52px 52px;
+    }
+
+    .hero::after,
+    .hero-section::after,
+    .landing::after,
+    .landing-page::after,
+    .home-hero::after {
+        width: 420px;
+        height: 420px;
+
+        right: -220px;
+        top: 130px;
+
+        filter: blur(55px);
+    }
+
+    .hero-actions,
+    .hero-cta,
+    .hero-buttons,
+    .cta-group {
+        flex-wrap: wrap !important;
+
+        gap: 18px !important;
+    }
+}
+
+
+/* =========================================================
+   ABOUT SECTION — clean separation
+   ========================================================= */
+
+.about,
+.about-section,
+#about {
+    position: relative !important;
+
+    z-index: 2 !important;
+
+    margin-top: 0 !important;
+
+    overflow: hidden !important;
+}
+
+
+/* =========================================================
+   FINAL SAFETY
+   ========================================================= */
+
+.hero,
+.hero-section,
+.landing,
+.landing-page,
+.home-hero {
+    clip-path: none !important;
+}
+
+/* ================================================================
+   GMP & ASSOCIATES
+   FINAL LANDING PAGE OVERRIDE
+   ---------------------------------------------------------------
+   PURPOSE:
+   • GMP logo remains COMPLETELY untouched
+   • Header remains above everything
+   • Hero never gets pushed underneath itself on desktop
+   • Audit / Tax / Finance stay on the RIGHT
+   • Headline stays on the LEFT
+   • No overlap
+   • No clipping
+   • Fine background grid restored
+   • Soft blue atmospheric blur restored
+   • Works correctly with Safari viewport scaling
+   • Mobile/tablet remains responsive
+   ================================================================ */
+
+
+/* ================================================================
+   01 — GLOBAL SAFETY
+   ================================================================ */
+
+html,
+body {
+    overflow-x: hidden !important;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* ================================================================
+   02 — HEADER
+   DO NOT TOUCH ANY LOGO STYLING.
+   ================================================================ */
+
+.header {
+    position: relative !important;
+    z-index: 99999 !important;
+    overflow: visible !important;
+}
+
+
+/* ================================================================
+   03 — HERO MASTER
+   ================================================================ */
+
+.hero {
+    position: relative !important;
+    isolation: isolate !important;
+
+    width: 100% !important;
+
+    min-height: calc(100vh - var(--gmp-header-safe, 120px)) !important;
+
+    margin: 0 !important;
+
+    overflow: hidden !important;
+
+    background-color: #ffffff !important;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.72),
+            rgba(255, 255, 255, 0.72)
+        ),
+        linear-gradient(
+            to right,
+            rgba(39, 92, 180, 0.075) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            to bottom,
+            rgba(39, 92, 180, 0.075) 1px,
+            transparent 1px
+        ) !important;
+
+    background-size:
+        auto,
+        74px 74px,
+        74px 74px !important;
+
+    background-position:
+        center,
+        center,
+        center !important;
+}
+
+
+/* ================================================================
+   04 — SOFT BLUE ATMOSPHERIC BLUR
+   ================================================================ */
+
+.hero::before {
+    content: "";
+
+    position: absolute !important;
+
+    width: 720px;
+    height: 720px;
+
+    right: -180px;
+    top: 120px;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(76, 160, 255, 0.18) 0%,
+            rgba(76, 160, 255, 0.10) 30%,
+            rgba(76, 160, 255, 0.045) 52%,
+            transparent 73%
+        );
+
+    filter: blur(60px);
+
+    z-index: -2 !important;
+}
+
+
+/* ================================================================
+   05 — SECONDARY ATMOSPHERIC LIGHT
+   ================================================================ */
+
+.hero::after {
+    content: "";
+
+    position: absolute !important;
+
+    width: 600px;
+    height: 600px;
+
+    left: -260px;
+    bottom: -300px;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(37, 99, 235, 0.10) 0%,
+            rgba(37, 99, 235, 0.045) 42%,
+            transparent 72%
+        );
+
+    filter: blur(55px);
+
+    z-index: -2 !important;
+}
+
+
+/* ================================================================
+   06 — HERO CONTAINER
+   IMPORTANT:
+   This overrides the old 1100px one-column rule.
+   ================================================================ */
+
+@media (min-width: 901px) {
+
+    .hero-container {
+        position: relative !important;
+
+        display: grid !important;
+
+        grid-template-columns:
+            minmax(0, 1fr)
+            clamp(270px, 24vw, 360px) !important;
+
+        column-gap:
+            clamp(55px, 7vw, 120px) !important;
+
+        align-items: start !important;
+
+        width: 100% !important;
+
+        min-height:
+            calc(100vh - var(--gmp-header-safe, 120px)) !important;
+
+        margin: 0 !important;
+
+        padding:
+            clamp(42px, 5vh, 72px)
+            clamp(28px, 3.2vw, 64px)
+            clamp(80px, 9vh, 120px)
+            clamp(28px, 3.2vw, 64px) !important;
+
+        overflow: visible !important;
+    }
+
+
+    /* ============================================================
+       HERO CONTENT — LEFT COLUMN
+       ============================================================ */
+
+    .hero-content {
+        position: relative !important;
+
+        grid-column: 1 !important;
+
+        grid-row: 1 !important;
+
+        width: 100% !important;
+
+        min-width: 0 !important;
+
+        display: block !important;
+
+        margin: 0 !important;
+
+        padding: 0 !important;
+
+        z-index: 5 !important;
+    }
+
+
+    /* ============================================================
+       SERVICES — RIGHT COLUMN
+       THIS IS THE ACTUAL FIX FOR AUDIT/TAX/FINANCE.
+       ============================================================ */
+
+    .hero-index {
+        position: relative !important;
+
+        grid-column: 2 !important;
+
+        grid-row: 1 !important;
+
+        align-self: start !important;
+
+        justify-self: stretch !important;
+
+        width: 100% !important;
+
+        max-width: 360px !important;
+
+        margin: clamp(250px, 27vh, 360px) 0 0 !important;
+
+        padding: 0 !important;
+
+        display: block !important;
+
+        border-left: 1px solid #dcecf8 !important;
+
+        z-index: 8 !important;
+
+        transform: none !important;
+    }
+
+
+    .hero-index > div {
+        position: relative !important;
+
+        width: 100% !important;
+
+        min-height: 118px !important;
+
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        justify-content: center !important;
+
+        padding:
+            20px 24px 20px 26px !important;
+
+        border-top: 0 !important;
+
+        border-right: 0 !important;
+
+        border-bottom:
+            1px solid #dcecf8 !important;
+
+        transform: none !important;
+    }
+
+
+    .hero-index > div:first-child {
+        border-top:
+            1px solid #dcecf8 !important;
+    }
+
+
+    .hero-index > div:last-child {
+        border-bottom:
+            1px solid #dcecf8 !important;
+    }
+
+
+    .hero-index > div:hover {
+        transform: translateX(-4px) !important;
+
+        background:
+            rgba(245, 251, 255, 0.78) !important;
+    }
+
+
+    .hero-index span {
+        display: block !important;
+
+        margin-bottom: 9px !important;
+
+        color: #2864e8 !important;
+
+        font-size: 0.66rem !important;
+
+        line-height: 1 !important;
+
+        font-weight: 800 !important;
+
+        letter-spacing: 0.10em !important;
+    }
+
+
+    .hero-index p {
+        margin: 0 !important;
+
+        color: #0d1427 !important;
+
+        font-size:
+            clamp(0.94rem, 1.05vw, 1.05rem) !important;
+
+        line-height: 1.12 !important;
+
+        font-weight: 650 !important;
+    }
+
+
+    /* ============================================================
+       HERO TITLE
+       ============================================================ */
+
+    .hero-title {
+        position: relative !important;
+
+        z-index: 6 !important;
+
+        width: 100% !important;
+
+        max-width: 900px !important;
+
+        margin: 0 !important;
+
+        padding: 0 !important;
+
+        transform: none !important;
+
+        letter-spacing: -0.055em !important;
+    }
+
+
+    .hero-title span {
+        display: block !important;
+
+        white-space: nowrap !important;
+    }
+
+
+    .hero-title .blue-word,
+    .blue-word {
+        color: #2864e8 !important;
+    }
+
+
+    /* ============================================================
+       DESCRIPTION
+       ============================================================ */
+
+    .hero-description {
+        position: relative !important;
+
+        z-index: 6 !important;
+
+        max-width: 650px !important;
+
+        margin:
+            clamp(38px, 4.5vh, 58px)
+            0 0 !important;
+
+        padding: 0 !important;
+    }
+
+
+    /* ============================================================
+       BUTTONS
+       ============================================================ */
+
+    .hero-actions {
+        position: relative !important;
+
+        z-index: 6 !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+
+        gap: 28px !important;
+
+        margin:
+            clamp(32px, 4vh, 52px)
+            0 0 !important;
+
+        padding: 0 !important;
+    }
+
+
+    /* ============================================================
+       SCROLL CUE
+       ============================================================ */
+
+    .scroll-cue {
+        position: absolute !important;
+
+        z-index: 10 !important;
+
+        bottom: 28px !important;
+
+        left: 50% !important;
+
+        transform: translateX(-50%) !important;
+    }
+}
+
+
+/* ================================================================
+   07 — LARGE DESKTOP
+   ================================================================ */
+
+@media (min-width: 1400px) {
+
+    .hero-container {
+        grid-template-columns:
+            minmax(0, 1fr)
+            360px !important;
+
+        column-gap: 110px !important;
+
+        padding-left: 48px !important;
+        padding-right: 48px !important;
+    }
+
+
+    .hero-index {
+        margin-top: 285px !important;
+    }
+
+
+    .hero-title {
+        max-width: 920px !important;
+    }
+}
+
+
+/* ================================================================
+   08 — LAPTOP
+   IMPORTANT:
+   Still TWO COLUMNS.
+   ================================================================ */
+
+@media (min-width: 901px) and (max-width: 1399px) {
+
+    .hero-container {
+        grid-template-columns:
+            minmax(0, 1fr)
+            clamp(250px, 27vw, 320px) !important;
+
+        column-gap:
+            clamp(38px, 5vw, 70px) !important;
+    }
+
+
+    .hero-index {
+        margin-top: clamp(220px, 25vh, 310px) !important;
+    }
+
+
+    .hero-title {
+        max-width: 760px !important;
+    }
+
+
+    .hero-title span {
+        white-space: normal !important;
+    }
+}
+
+
+/* ================================================================
+   09 — TABLET
+   ================================================================ */
+
+@media (max-width: 900px) {
+
+    .hero {
+        min-height: auto !important;
+
+        overflow: hidden !important;
+    }
+
+
+    .hero-container {
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        align-items: stretch !important;
+
+        gap: 42px !important;
+
+        min-height: auto !important;
+
+        padding:
+            42px
+            28px
+            90px !important;
+    }
+
+
+    .hero-content {
+        width: 100% !important;
+
+        display: block !important;
+    }
+
+
+    .hero-index {
+        position: relative !important;
+
+        width: 100% !important;
+
+        max-width: none !important;
+
+        margin: 0 !important;
+
+        border-left: 0 !important;
+
+        border-top:
+            1px solid #dcecf8 !important;
+
+        display: grid !important;
+
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr)) !important;
+    }
+
+
+    .hero-index > div {
+        min-height: 120px !important;
+
+        border-top: 0 !important;
+
+        border-bottom: 0 !important;
+
+        border-left:
+            1px solid #dcecf8 !important;
+
+        padding:
+            20px !important;
+    }
+
+
+    .hero-index > div:first-child {
+        border-left: 0 !important;
+    }
+
+
+    .hero-index > div:last-child {
+        border-right: 0 !important;
+    }
+}
+
+
+/* ================================================================
+   10 — MOBILE
+   ================================================================ */
+
+@media (max-width: 600px) {
+
+    .hero-container {
+        width:
+            min(
+                calc(100% - 28px),
+                var(--max-width, 1200px)
+            ) !important;
+
+        margin: 0 auto !important;
+
+        padding:
+            38px
+            0
+            82px !important;
+
+        gap: 34px !important;
+    }
+
+
+    .hero-title {
+        max-width: 100% !important;
+
+        font-size:
+            clamp(3rem, 15vw, 5rem) !important;
+
+        line-height: 0.9 !important;
+    }
+
+
+    .hero-title span {
+        white-space: normal !important;
+    }
+
+
+    .hero-description {
+        max-width: 100% !important;
+
+        margin-top: 30px !important;
+    }
+
+
+    .hero-actions {
+        align-items: flex-start !important;
+
+        flex-direction: column !important;
+
+        gap: 22px !important;
+    }
+
+
+    .hero-index {
+        display: grid !important;
+
+        grid-template-columns: 1fr !important;
+
+        width: 100% !important;
+
+        margin: 0 !important;
+
+        border-top:
+            1px solid #dcecf8 !important;
+    }
+
+
+    .hero-index > div,
+    .hero-index > div:first-child,
+    .hero-index > div:last-child {
+        min-height: 82px !important;
+
+        border-left: 0 !important;
+
+        border-right: 0 !important;
+
+        border-bottom:
+            1px solid #dcecf8 !important;
+
+        padding:
+            16px 18px !important;
+    }
+}
+
+
+/* ================================================================
+   11 — REDUCE MOTION
+   ================================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hero-index > div,
+    .hero-index > div:hover {
+        transform: none !important;
+
+        transition: none !important;
+    }
+}
+
+
+/* ================================================================
+   END OF FINAL OVERRIDE
+   DO NOT ADD ANOTHER HERO OVERRIDE AFTER THIS.
+   ================================================================ */
+
+   /* =========================================================
+   GMP — FINAL MICRO POSITION OVERRIDE
+   DO NOT CHANGE HERO TITLE POSITION
+   ========================================================= */
+
+/* MOVE GMP HERO LOGO UP ONLY
+   Does NOT change PRECISION / BEYOND / NUMBERS layout */
+.hero-brand {
+  transform: translateY(-55px) !important;
+}
+
+
+/* =========================================================
+   CA INDIA HEADER LOGO — LARGER
+   Header position/height remains untouched
+   ========================================================= */
+
+.header .header-ca-logo {
+  height: 72px !important;
+  width: auto !important;
+  max-width: 180px !important;
+  object-fit: contain !important;
+  object-position: left center !important;
+}
+
+
+/* =========================================================
+   KEEP HERO TITLE EXACTLY WHERE IT IS
+   ========================================================= */
+
+.hero-title {
+  transform: none !important;
+}
+
+/* =========================================================
+   GMP LOGO — FULLY RESPONSIVE
+   Scales smoothly from small phones → large displays
+   ========================================================= */
+
+.hero-brand {
+  width: clamp(260px, 38vw, 620px) !important;  
+  max-width: 100% !important;
+
+  /* keep the logo shifted upward */
+  transform: translateY(-75px) !important;
+
+  margin-bottom: clamp(18px, 2.5vw, 38px) !important;
+}
+
+.hero-gmp-logo {
+  display: block !important;
+
+  width: 100% !important;
+  height: auto !important;
+
+  max-width: 100% !important;
+  max-height: none !important;
+
+  object-fit: contain !important;
+  object-position: left center !important;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .hero-brand {
+    width: clamp(250px, 48vw, 500px) !important;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+  .hero-brand {
+    width: min(90vw, 430px) !important;
+
+    transform: translateY(-35px) !important;
+
+    margin-bottom: 22px !important;
+  }
+
+  .hero-gmp-logo {
+    width: 100% !important;
+  }
+
+}
+
+
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .hero-brand {
+    width: 88vw !important;
+
+    transform: translateY(-25px) !important;
+  }
+
+}
+
+
+/* =========================================================
+   VERY LARGE SCREENS
+   ========================================================= */
+
+@media (min-width: 1600px) {
+
+  .hero-brand {
+    width: clamp(520px, 34vw, 700px) !important;
+  }
+
+}
+/* =========================================================
+   HEADER — STICKY / FOLLOWS SCROLL
+   ========================================================= */
+
+.header {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+
+  z-index: 99999 !important;
+
+  transform: translateY(0) !important;
+}
+
+/* =========================================================
+   GMP HERO LOGO — FINAL POSITION OVERRIDE
+   Moves ONLY the GMP logo slightly DOWN
+   Does NOT move PRECISION / BEYOND / NUMBERS
+   ========================================================= */
+
+.hero-brand {
+  transform: translateY(-20px) !important;
+}
+
+/* Keep GMP logo visible above the hero layers */
+.hero-brand,
+.hero-gmp-logo {
+  position: relative !important;
+  z-index: 10 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}

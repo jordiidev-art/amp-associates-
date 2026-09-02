@@ -15,24 +15,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const loader = document.getElementById("loader");
   const header = document.getElementById("header");
-  const scrollProgress = document.getElementById("scrollProgress");
+  const scrollProgress =
+    document.getElementById("scrollProgress");
 
-  const menuButton = document.getElementById("menuButton");
-  const mobileNav = document.getElementById("mobileNav");
+  const menuButton =
+    document.getElementById("menuButton");
 
-  const mobileLinks = document.querySelectorAll(".mobile-nav a");
-  const revealElements = document.querySelectorAll(".reveal");
-  const parallaxElements = document.querySelectorAll("[data-parallax]");
-  const teamCards = document.querySelectorAll(".team-card");
+  const mobileNav =
+    document.getElementById("mobileNav");
+
+  const mobileLinks =
+    document.querySelectorAll(".mobile-nav a");
+
+  const revealElements =
+    document.querySelectorAll(".reveal");
+
+  const parallaxElements =
+    document.querySelectorAll("[data-parallax]");
+
+  const teamCards =
+    document.querySelectorAll(".team-card");
 
 
   /* =========================================================
      REDUCED MOTION
      ========================================================= */
 
-  const reducedMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
-  ).matches;
+  const reducedMotion =
+    window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
 
 
   /* =========================================================
@@ -41,13 +53,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   body.classList.add("loading");
 
-  /*
-     Keep the header hidden while the loader is active.
-     The CSS can still handle the actual visual layout.
-  */
-
   if (header) {
-    header.setAttribute("aria-hidden", "true");
+    header.setAttribute(
+      "aria-hidden",
+      "true"
+    );
   }
 
 
@@ -59,28 +69,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function hideLoader() {
 
-    if (loaderHidden) return;
+    if (loaderHidden) {
+      return;
+    }
 
     loaderHidden = true;
 
     if (loader) {
+
       loader.classList.add("hidden");
 
       loader.setAttribute(
         "aria-hidden",
         "true"
       );
+
     }
 
     body.classList.remove("loading");
 
-    /*
-       Header becomes available only after
-       the loading screen has finished.
-    */
-
     if (header) {
-      header.removeAttribute("aria-hidden");
+
+      header.removeAttribute(
+        "aria-hidden"
+      );
+
     }
 
     updateScroll();
@@ -89,7 +102,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (reducedMotion) {
 
-    setTimeout(hideLoader, 150);
+    setTimeout(
+      hideLoader,
+      150
+    );
 
   } else {
 
@@ -108,10 +124,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     );
 
-    /*
-       Absolute failsafe.
-       Prevents the loader from staying forever.
-    */
 
     setTimeout(
       hideLoader,
@@ -158,6 +170,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     body.style.overflow =
       open ? "hidden" : "";
+
   }
 
 
@@ -166,7 +179,11 @@ document.addEventListener("DOMContentLoaded", () => {
     menuButton.addEventListener(
       "click",
       () => {
-        setMenu(!menuOpen);
+
+        setMenu(
+          !menuOpen
+        );
+
       }
     );
 
@@ -179,7 +196,9 @@ document.addEventListener("DOMContentLoaded", () => {
       link.addEventListener(
         "click",
         () => {
+
           setMenu(false);
+
         }
       );
 
@@ -195,7 +214,9 @@ document.addEventListener("DOMContentLoaded", () => {
         event.key === "Escape" &&
         menuOpen
       ) {
+
         setMenu(false);
+
       }
 
     }
@@ -213,7 +234,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     revealElements.forEach(
       (element) => {
-        element.classList.add("visible");
+
+        element.classList.add(
+          "visible"
+        );
+
       }
     );
 
@@ -246,7 +271,6 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         {
           threshold: 0.12,
-
           rootMargin:
             "0px 0px -50px 0px"
         }
@@ -267,7 +291,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   /* =========================================================
-     SCROLL PROGRESS + HEADER STATE
+     SCROLL PROGRESS
+     + HEADER STATE
+     + PARALLAX
      ========================================================= */
 
   let scrollTicking = false;
@@ -277,7 +303,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const scrollTop =
       window.scrollY ||
-      window.pageYOffset;
+      window.pageYOffset ||
+      0;
 
 
     const documentHeight =
@@ -305,11 +332,18 @@ document.addEventListener("DOMContentLoaded", () => {
           : 0;
 
 
-      scrollProgress.style.transform =
-        `scaleX(${Math.min(
-          Math.max(progress, 0),
+      const clampedProgress =
+        Math.min(
+          Math.max(
+            progress,
+            0
+          ),
           1
-        )})`;
+        );
+
+
+      scrollProgress.style.transform =
+        `scaleX(${clampedProgress})`;
 
     }
 
@@ -483,14 +517,26 @@ document.addEventListener("DOMContentLoaded", () => {
               !targetId ||
               targetId === "#"
             ) {
+
               return;
+
             }
 
 
-            const target =
-              document.querySelector(
-                targetId
-              );
+            let target = null;
+
+            try {
+
+              target =
+                document.querySelector(
+                  targetId
+                );
+
+            } catch (error) {
+
+              return;
+
+            }
 
 
             if (!target) {
@@ -518,7 +564,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
             window.scrollTo({
 
-              top: targetPosition,
+              top:
+                targetPosition,
 
               behavior:
                 reducedMotion
@@ -548,7 +595,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const serviceItems =
       document.querySelectorAll(
-        ".service-item, .service-row, .service-card, .services-item, .service"
+        `
+        .service-item,
+        .service-row,
+        .service-card,
+        .services-item,
+        .service,
+        .hero-index > div
+        `
       );
 
 
@@ -580,7 +634,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
             window.scrollTo({
 
-              top: targetPosition,
+              top:
+                targetPosition,
 
               behavior:
                 reducedMotion
@@ -596,6 +651,46 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
   }
+
+
+  /* =========================================================
+     HEADER LOGOS → BACK TO TOP
+     ========================================================= */
+
+  document
+    .querySelectorAll(
+      ".brand-ca, .brand-gmp, .header-ca-logo, .header-gmp-logo"
+    )
+    .forEach(
+      (logo) => {
+
+        logo.style.cursor =
+          "pointer";
+
+
+        logo.addEventListener(
+          "click",
+          (event) => {
+
+            event.preventDefault();
+
+
+            window.scrollTo({
+
+              top: 0,
+
+              behavior:
+                reducedMotion
+                  ? "auto"
+                  : "smooth"
+
+            });
+
+          }
+        );
+
+      }
+    );
 
 
   /* =========================================================
@@ -686,25 +781,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
   );
-
-});
-/* =========================================================
-   HEADER LOGOS → BACK TO TOP
-   ========================================================= */
-
-document.querySelectorAll(
-  ".brand-ca, .brand-gmp"
-).forEach((logo) => {
-
-  logo.addEventListener("click", (event) => {
-
-    event.preventDefault();
-
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
-    });
-
-  });
 
 });
