@@ -6912,3 +6912,32 @@ body {
     width: 1000px !important;
     height: auto !important;
 }
+/* =========================================================
+   CONTACT DETAILS — LEFT ALIGN EVERYTHING
+   ========================================================= */
+
+.contact-details {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+    width: 100% !important;
+}
+
+.contact-detail {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+}
+
+.contact-detail-label,
+.contact-detail a,
+.contact-detail span {
+    text-align: left !important;
+}
+.hero-brand {
+    margin-top: -40px !important;
+}
