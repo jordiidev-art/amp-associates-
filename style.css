@@ -6639,3 +6639,276 @@ body {
   opacity: 1 !important;
   visibility: visible !important;
 }
+/* =========================================================
+   GMP — FINAL VISUAL OVERRIDES
+   Paste at the very bottom of style.css
+   ========================================================= */
+
+   
+
+   /* =========================================================
+   CONTACT DETAILS — SAME LINE
+   ========================================================= */
+
+.contact-details {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    gap: 40px !important;
+
+    /* Match the paragraph text colour */
+    color: rgba(190, 203, 222, 0.85) !important;
+}
+
+.contact-detail {
+    color: rgba(190, 203, 222, 0.85) !important;
+}
+
+.contact-detail:first-child {
+    text-align: left !important;
+}
+
+.contact-detail:last-child {
+    text-align: right !important;
+}
+
+.contact-detail-label,
+.contact-detail a {
+    color: rgba(190, 203, 222, 0.85) !important;
+}
+
+
+/* Mobile */
+@media (max-width: 700px) {
+    .contact-details {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 8px !important;
+    }
+
+    .contact-detail,
+    .contact-detail:last-child {
+        text-align: left !important;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   1. HERO GMP LOGO
+   Medium size + closer to header
+   --------------------------------------------------------- */
+
+.hero-brand {
+    margin-top: 10px !important;
+    margin-bottom: 18px !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.hero-gmp-logo {
+    width: 700px !important;
+    max-width: 32vw !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 !important;
+}
+
+
+/* ---------------------------------------------------------
+   2. HEADER CA LOGO
+   Larger + no unwanted margin
+   --------------------------------------------------------- */
+
+.header-brand {
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.header-ca-logo {
+    width: 75px !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+
+/* ---------------------------------------------------------
+   3. CONTACT EMAIL + PHONE
+   Cleaner / more premium typography
+   --------------------------------------------------------- */
+
+.contact-details {
+    font-family: "Manrope", sans-serif !important;
+}
+
+.contact-detail {
+    font-family: "Manrope", sans-serif !important;
+}
+
+.contact-detail-label {
+    font-family: "Cabinet Grotesk", "Manrope", sans-serif !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.04em !important;
+}
+
+.contact-detail a {
+    font-family: "Manrope", sans-serif !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.01em !important;
+}
+
+
+/* ---------------------------------------------------------
+   4. PURE WHITE FOOTER
+   --------------------------------------------------------- */
+
+.footer {
+    background: #ffffff !important;
+    color: #000000 !important;
+}
+
+.footer *,
+.footer p,
+.footer span,
+.footer a {
+    color: #000000 !important;
+}
+
+.footer a {
+    text-decoration: none !important;
+}
+
+.footer a:hover {
+    color: #000000 !important;
+}
+
+
+/* ---------------------------------------------------------
+   5. FOOTER BRAND
+   --------------------------------------------------------- */
+
+.footer-brand {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.footer-brand img {
+    display: block !important;
+    margin: 0 !important;
+    max-width: 700px !important;
+    height: auto !important;
+}
+
+
+/* ---------------------------------------------------------
+   6. FOOTER LINES / BORDERS
+   Keep them subtle on white
+   --------------------------------------------------------- */
+
+.footer-top,
+.footer-bottom {
+    border-color: rgba(0, 0, 0, 0.14) !important;
+}
+
+
+/* ---------------------------------------------------------
+   7. MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width: 768px) {
+
+    .header-ca-logo {
+        width: 64px !important;
+    }
+
+    .hero-brand {
+        margin-top: 8px !important;
+        margin-bottom: 16px !important;
+    }
+
+    .hero-gmp-logo {
+        width: 170px !important;
+        max-width: 52vw !important;
+    }
+
+    .footer-brand img {
+        max-width: 180px !important;
+    }
+
+    .contact-detail a {
+        font-size: 0.95rem !important;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   8. VERY SMALL PHONES
+   --------------------------------------------------------- */
+
+@media (max-width: 420px) {
+
+    .header-ca-logo {
+        width: 58px !important;
+    }
+
+    .hero-gmp-logo {
+        width: 150px !important;
+        max-width: 58vw !important;
+    }
+}
+
+.hero-gmp-logo {
+    width: 550px !important;
+    height: auto !important;
+}
+
+/* =========================================================
+   CONTACT EMAIL + PHONE — MATCH PARAGRAPH COLOUR
+   ========================================================= */
+
+.contact-detail a,
+.contact-detail a:visited,
+.contact-detail a:hover,
+.contact-detail a:active,
+.contact-detail a:focus {
+    color: rgba(190, 203, 222, 0.85) !important;
+    font-family: inherit !important;
+    text-decoration: none !important;
+}
+/* =========================================================
+   CONTACT EMAIL + PHONE — MATCH DESCRIPTION COLOUR
+   ========================================================= */
+
+.contact-detail a,
+.contact-detail a:visited,
+.contact-detail a:hover,
+.contact-detail a:focus,
+.contact-detail a:active {
+    color: #aebdd2 !important;
+    text-decoration: none !important;
+}
+
+.hero-gmp-logo {
+    width: 800px !important;
+    max-width: 40vw !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 !important;
+}
+
+.footer-brand img {
+    width: 500px !important;
+    height: auto !important;
+    max-width: 40vw !important;
+    display: block !important;
+    margin: 0 !important;
+}
+/* FOOTER LOGO SIZE — CHANGE THIS VALUE */
+.footer-brand img {
+    width: 1000px !important;
+    height: auto !important;
+}
